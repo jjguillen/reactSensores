@@ -8,7 +8,6 @@ function Plantaciones(){
    //Renderiza el componente al cargarlo
     useEffect(() => {
         getPlantaciones(); // Llamar a la API cuando el componente se monta
-        console.log("Carga plantaciones...");
     }, []);
 
     return (

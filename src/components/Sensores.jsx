@@ -12,7 +12,6 @@ function Sensores() {
     //Renderiza el componente al cargarlo
     useEffect(() => {
         getSensores(id); // Llamar a la API cuando el componente se monta
-        console.log("Carga sensores...");
     }, []);
 
     return (

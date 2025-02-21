@@ -3,6 +3,7 @@ import {NavLink, Route, Routes} from "react-router-dom";
 import Plantaciones from "./Plantaciones.jsx";
 import Informes from './Informes';
 import Sensores from "./Sensores.jsx";
+import DataSensor from "./DataSensor.jsx";
 
 // eslint-disable-next-line react/prop-types
 function Inicio({ onLogout }) {
@@ -44,7 +45,7 @@ function Inicio({ onLogout }) {
                                     <Route path="/informes" element={<Informes/>}/>
                                     <Route path="/plantaciones" element={<Plantaciones/>}/>
                                     <Route path="/plantaciones/:id/sensores" element={<Sensores />} />
-                                    <Route path="/plantaciones/:id/sensores" element={<Sensores />} />
+                                    <Route path="/plantaciones/sensor/:idSensor" element={<DataSensor />} />
                                 </Routes>
                             </div>
                         </section>

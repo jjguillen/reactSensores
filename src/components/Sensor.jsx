@@ -1,9 +1,10 @@
+import {Link, NavLink} from "react-router-dom";
+
 function Sensor(props) {
     // eslint-disable-next-line react/prop-types
     const sensor = props.sensor;
     let colorFrom, colorTo, color, textColor;
 
-    console.log(sensor.tipo);
     switch (sensor.tipo) {
         case "TEMPERATURA":
             colorFrom = "from-red-200";
@@ -47,9 +48,11 @@ function Sensor(props) {
                             className="fa fa-wallet fa-2x fa-inverse"></i></div>
                     </div>
                     <div className="flex-1 text-right md:text-center">
-                        <h2 className="font-bold uppercase text-gray-600">Sensor {sensor.id} </h2>
-                        <p className="font-bold text-3xl"><span
-                            className={`${textColor}`}>{sensor.tipo}</span></p>
+                        <Link to={`/plantaciones/sensor/${sensor.id}`}>
+                            <h2 className="font-bold uppercase text-gray-600">Sensor {sensor.id} </h2>
+                            <p className="font-bold text-3xl"><span
+                                className={`${textColor}`}>{sensor.tipo}</span></p>
+                        </Link>
                     </div>
                 </div>
             </div>

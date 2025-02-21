@@ -37,7 +37,7 @@ function PlantacionesProviderWrapper(props) {
         }
     };
 
-    //Obtener plantaciones
+    //Obtener sensores de una plantación
     const getSensores = async (id) => {
         const token = sessionStorage.getItem("token"); // Obtener el token almacenado
         if (token) {
